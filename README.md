@@ -2,7 +2,7 @@
 
 ## DESCRIPTION
 
-Projet 
+Le projet avait pour but de recréer certaines fonctionnalités du réseau social "INSTAGRAM" en PHP.
 
 ## DATABASE SCRIPT
 
@@ -181,3 +181,24 @@ exit();
 ```
 
 <br/>
+
+## SECURITE
+
+L'utilisation de `bindValue` dans les requêtes préparées aide à sécuriser les requêtes SQL en prévenant les attaques par injection et en échappant automatiquement les caractères spéciaux. Cela renforce la sécurité de l'application en garantissant que les données sont correctement traitées par la base de données et en évitant les vulnérabilités potentielles liées à l'entrée utilisateur.
+
+<br/>
+
+## AXE D'AMELIORATION
+
+Le projet actuel offre un bon point de départ, mais il existe plusieurs axes d'amélioration pour garantir un projet plus abouti comme l'amélioration du un code, une meilleure gestion des erreurs et la finalisation des fonctionnalités non fonctionnelles (recherche utilisateur, poster une publication, suivre des utilisateurs, commenter, visualiser des posters, etc).
+
+<br/>
+
+## PROBLEMES RENCONTRES
+
+- Première création d'un MVC,
+- Connaissance limité en PHP malgré des quelques bases,
+- Problème avec docker/dev-container,
+- Projet peut-être trop complexe,
+- Préoccupation sur le mémoire/souteance,
+- Rush de fin d'année (pas concentré et consacré à 100% sur le projet),
