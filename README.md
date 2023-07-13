@@ -201,4 +201,4 @@ Le projet actuel offre un bon point de départ, mais il existe plusieurs axes d'
 - Problème avec docker/dev-container,
 - Projet peut-être trop complexe,
 - Préoccupation sur le mémoire/souteance,
-- Rush de fin d'année (pas concentré et consacré à 100% sur le projet),
+- Rush de fin d'année (pas concentré et consacré à 100% sur le projet).
