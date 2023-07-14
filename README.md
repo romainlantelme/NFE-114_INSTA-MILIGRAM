@@ -51,7 +51,7 @@ CREATE TABLE `FOLLOWER`(
 
 ## FILES
 
-### `config.php`
+### `insta-miligram/config.php`
 
 le fichier `config.php` est utilisé pour définir les informations de configuration nécessaires à la connexion à la base de données MySQL, telles que l'hôte, le nom de la base de données, le jeu de caractères, le nom d'utilisateur et le mot de passe.
 
@@ -66,7 +66,7 @@ Ces constantes peuvent être utilisées dans d'autres fichiers pour faciliter la
 
 <br/>
 
-### `db_connect.php`
+### `insta_miligram/db_connect.php`
 
 Le fichier `db_connect.php` permet de se connecter à une base de données MySQL en utilisant PDO, en utilisant les informations de configuration fournies dans le fichier `config.php`. Il configure également PDO pour lancer des exceptions en cas d'erreur de requête, ce qui facilite la gestion des erreurs lors de l'interaction avec la base de données.
 
@@ -86,7 +86,7 @@ try {
 
 <br/>
 
-### `models/userModel.php`
+### `insta_miligram/models/userModel.php`
 
 Le fichier `models/userModel.php` contient une classe "User" qui encapsule les opérations liées à la gestion des utilisateurs dans une base de données. Il fournit des méthodes pour récupérer, ajouter, mettre à jour et supprimer des utilisateurs, ainsi que pour vérifier si un pseudo ou une adresse e-mail est déjà pris par un autre utilisateur.
 
@@ -104,7 +104,7 @@ updateUserByID($userID, $pseudo, $firstName, $lastName, $email, $profilePicture,
 
 <br/>
 
-### `models/postModel.php`
+### `insta-miligram/models/postModel.php`
 
 Le fichier `models/postModel.php` contient une classe "Post" qui encapsule les opérations liées à la gestion des posts dans une base de données. Il fournit des méthodes pour récupérer tous les posts, récupérer un post par son identifiant, récupérer les posts d'un utilisateur spécifique, ajouter un nouveau post et supprimer un post.
 
@@ -118,7 +118,7 @@ deletePostByID($postID);
 
 <br/>
 
-### `models/commentModel.php`
+### `insta-miligram/models/commentModel.php`
 
 Le fichier `models/commentModel.php` contient une classe "Comment" qui encapsule les opérations liées à la gestion des commentaires dans une base de données. Il fournit des méthodes pour récupérer tous les commentaires, récupérer un commentaire par son identifiant, récupérer les commentaires associés à un post spécifique, ajouter un nouveau commentaire et supprimer un commentaire.
 
@@ -132,43 +132,43 @@ deleteCommentByID($commentID);
 
 <br/>
 
-### `controllers/loginController.php
+### `insta-miligram/controllers/loginController.php
 
 Le fichier `controllers/loginController.php` gère le processus de connexion d'un utilisateur. Il récupère les informations de connexion depuis le formulaire, vérifie les informations avec celles stockées dans la base de données, enregistre l'utilisateur dans une variable de session et redirige l'utilisateur vers la page de profil (`views/profil.php`) en cas de succès. Sinon, il affiche un message d'erreur en cas d'échec d'authentification.
 
 <br/>
 
-### `views/login.php`
+### `insta-miligram/views/login.php`
 
 Le fichier `views/login.php` représente la vue de la page de connexion. Il affiche un formulaire de connexion avec des champs pour le pseudo et le mot de passe, ainsi qu'un bouton pour se connecter. Il fournit également un lien vers la page d'inscription pour les nouveaux utilisateurs. Lorsque le formulaire est soumis, les données sont traitées par le fichier `controllers/loginController.php` pour effectuer la logique de connexion.
 
 <br/>
 
-### `controllers/signupController.php`
+### `insta-miligram/controllers/signupController.php`
 
 Le fichier `controllers/signupController.php` gère le processus d'inscription d'un nouvel utilisateur. Il vérifie la disponibilité du pseudo et de l'e-mail, ajoute l'utilisateur à la base de données, affiche des messages de succès ou d'erreur, et effectue une vérification supplémentaire pour authentifier l'utilisateur nouvellement inscrit.
 
 <br/>
 
-### `views/signup.php`
+### `insta-miligram/views/signup.php`
 
 Le fichier `views/signup.php` représente la vue de la page d'inscription. Il affiche un formulaire d'inscription avec des champs pour le pseudo, le prénom, le nom, l'e-mail et le mot de passe, ainsi qu'un bouton pour s'inscrire. Il fournit également un lien vers la page de connexion pour les utilisateurs déjà inscrits. Lorsque le formulaire est soumis, les données sont traitées par le fichier `controllers/signupController.php` pour effectuer la logique d'inscription.
 
 <br/>
 
-### `controllers/profilController.php`
+### `insta-miligram/controllers/profilController.php`
 
 Le fichier `controllers/profileController.php` gère le processus de mise à jour du profil d'un utilisateur. Il récupère les nouvelles informations du formulaire de mise à jour, met à jour les informations de l'utilisateur dans la base de données et redirige l'utilisateur vers la page de profil mise à jour.
 
 <br/>
 
-### `views/profil.php`
+### `insta-miligram/views/profil.php`
 
 Le fichier `views/profile.php` représente la vue de la page de profil de l'utilisateur connecté. Il affiche les informations de profil de l'utilisateur dans un formulaire éditable, permettant à l'utilisateur de modifier les valeurs et de les soumettre pour mise à jour. Les données du formulaire sont traitées par le fichier `controllers/profileController.php` pour effectuer la logique de mise à jour du profil. Si aucun utilisateur n'est connecté, l'utilisateur est redirigé vers la page de connexion.
 
 <br/>
 
-### `views/logout.php`
+### `insta-miligram/views/logout.php`
 
  le fichier `logout.php` est utilisé pour effectuer la déconnexion d'un utilisateur. Il supprime les données de session, détruit la session et redirige l'utilisateur vers la page de connexion. Cela permet à l'utilisateur de se déconnecter en toute sécurité et de revenir à l'écran de connexion pour une nouvelle session.
  
