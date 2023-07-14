@@ -66,7 +66,7 @@ Ces constantes peuvent être utilisées dans d'autres fichiers pour faciliter la
 
 <br/>
 
-### `insta_miligram/db_connect.php`
+### `insta-miligram/db_connect.php`
 
 Le fichier `db_connect.php` permet de se connecter à une base de données MySQL en utilisant PDO, en utilisant les informations de configuration fournies dans le fichier `config.php`. Il configure également PDO pour lancer des exceptions en cas d'erreur de requête, ce qui facilite la gestion des erreurs lors de l'interaction avec la base de données.
 
